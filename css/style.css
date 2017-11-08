@@ -18,6 +18,9 @@
   src: url("../fonts/TrajanProRegular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
+p {
+  margin: 0; }
+
 .wrapper {
   max-width: 1280px;
   margin: 0 auto; }
@@ -264,5 +267,45 @@
       background-image: url("../img/hair.jpg"); }
     .wrapper main .divisions-row .background-men {
       background-image: url("../img/men.jpg"); }
+  .wrapper main .product-list {
+    font-size: 0; }
+    .wrapper main .product-list .item {
+      display: inline-block;
+      width: 426px;
+      height: 300px;
+      font-size: 12px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #e5e5e5;
+      position: relative;
+      padding: 27px 40px; }
+      .wrapper main .product-list .item .title {
+        font-family: "ProximaNovaBold", serif;
+        font-size: 18px;
+        line-height: 24px;
+        text-transform: uppercase;
+        max-width: 135px;
+        margin-bottom: 18px; }
+      .wrapper main .product-list .item .description {
+        font-family: "ProximaNovaRegular", serif;
+        font-size: 12px;
+        line-height: 16px;
+        color: #7f7f7f; }
+      .wrapper main .product-list .item .price {
+        position: absolute;
+        bottom: 30px;
+        left: 40px;
+        font-family: "ProximaNovaRegular", serif;
+        font-size: 18px;
+        line-height: 14px;
+        color: #7f7f7f;
+        text-transform: uppercase; }
+      .wrapper main .product-list .item img {
+        position: absolute;
+        bottom: 70px;
+        right: 60px; }
+      .wrapper main .product-list .item.with-border {
+        width: 428px;
+        border-left: 1px solid #e5e5e5;
+        border-right: 1px solid #e5e5e5; }
 
 /*# sourceMappingURL=style.css.map */

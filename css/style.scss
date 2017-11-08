@@ -26,6 +26,10 @@
   font-weight: normal;
 }
 
+p {
+  margin: 0;
+}
+
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
@@ -376,6 +380,61 @@
       @each $name in 'popular' 'hair' 'men' {
         .background-#{$name} {
           background-image: url('../img/#{$name}.jpg');
+        }
+      }
+    }
+
+    .product-list {
+      font-size: 0;
+
+      .item {
+        display: inline-block;
+        width: 426px;
+        height: 300px;
+        font-size: 12px;
+        //background-color: #ffbdbd;
+        box-sizing: border-box;
+        border-bottom: 1px solid #e5e5e5;
+        position: relative;
+        padding: 27px 40px;
+
+        .title {
+          font-family: "ProximaNovaBold", serif;
+          font-size: 18px;
+          line-height: 24px;
+          text-transform: uppercase;
+          max-width: 135px;
+          margin-bottom: 18px;
+        }
+
+        .description {
+          font-family: "ProximaNovaRegular", serif;
+          font-size: 12px;
+          line-height: 16px;
+          color: #7f7f7f;
+        }
+
+        .price {
+          position: absolute;
+          bottom: 30px;
+          left: 40px;
+          font-family: "ProximaNovaRegular", serif;
+          font-size: 18px;
+          line-height: 14px;
+          color: #7f7f7f;
+          text-transform: uppercase;
+        }
+
+        img {
+          position: absolute;
+          bottom: 70px;
+          right: 60px;
+        }
+
+        &.with-border {
+          width: 428px;
+          border-left: 1px solid #e5e5e5;
+          border-right: 1px solid #e5e5e5;
         }
       }
     }
