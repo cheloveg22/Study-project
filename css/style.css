@@ -9,11 +9,6 @@
   font-style: normal;
   font-weight: normal; }
 @font-face {
-  font-family: "BrandonGrotesqueBold";
-  src: url("../fonts/BrandonGrotesqueBold.otf") format("truetype");
-  font-style: normal;
-  font-weight: normal; }
-@font-face {
   font-family: "TrajanProRegular";
   src: url("../fonts/TrajanProRegular.ttf") format("truetype");
   font-style: normal;
@@ -81,10 +76,6 @@ p {
     text-align: center;
     padding: 40px 0 30px 0;
     border-bottom: 1px solid #f2f2f2; }
-    .wrapper header .second-row span {
-      font-family: "BrandonGrotesqueBold", serif;
-      text-transform: uppercase;
-      font-size: 24px; }
   .wrapper header .third-row {
     text-align: center;
     padding: 20px 0; }
@@ -186,7 +177,7 @@ p {
       font-size: 18px;
       display: inline-block;
       height: 194px;
-      width: 427px;
+      width: calc(100% / 3);
       box-sizing: border-box;
       vertical-align: top; }
     .wrapper main .divisions-row .popular-brands {
@@ -213,7 +204,6 @@ p {
         .wrapper main .divisions-row .popular-brands .arrow-btn i {
           margin-left: 12px; }
     .wrapper main .divisions-row .hair-care {
-      width: 426px;
       position: relative;
       padding: 30px 40px;
       color: #1e1e1e; }
@@ -271,7 +261,7 @@ p {
     font-size: 0; }
     .wrapper main .product-list .item {
       display: inline-block;
-      width: 426px;
+      width: 33.33%;
       height: 300px;
       font-size: 12px;
       box-sizing: border-box;
@@ -304,8 +294,45 @@ p {
         bottom: 70px;
         right: 60px; }
       .wrapper main .product-list .item.with-border {
-        width: 428px;
         border-left: 1px solid #e5e5e5;
         border-right: 1px solid #e5e5e5; }
+  .wrapper footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1e1e1e;
+    color: #8e8e8e;
+    font-family: "ProximaNovaRegular", serif;
+    font-size: 12px;
+    padding: 30px 35px; }
+    .wrapper footer .footer-column span {
+      display: block;
+      font-family: "ProximaNovaBold", serif;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: white; }
+    .wrapper footer .footer-column ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .wrapper footer .footer-column ul li {
+        margin: 18px 0; }
+    .wrapper footer .footer-column p {
+      max-width: 150px;
+      line-height: 24px; }
+    .wrapper footer .footer-column img {
+      margin: 20px 0; }
+    .wrapper footer .footer-column .social-logo {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: #c59a77;
+      border-radius: 20px;
+      text-align: center;
+      margin-top: 20px;
+      margin-right: 5px; }
+      .wrapper footer .footer-column .social-logo i {
+        line-height: 40px;
+        font-size: 14px;
+        color: white; }
 
 /*# sourceMappingURL=style.css.map */
