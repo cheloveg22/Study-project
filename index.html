@@ -5,6 +5,8 @@
 	<title>Lety</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/fontello.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -54,8 +56,15 @@
 		</header>
 		<main>
 			<div class="slider-block">
-				<img class="slider-image" src="img/slider-girl.jpg" alt="girl">
-				<img class="product-image" src="img/product.png" alt="product">
+                <div class="slider">
+                    <div class="image-block">
+                        <img class="slider-image" src="img/slider-girl.jpg" alt="girl">
+                    </div>
+                    <div class="image-block">
+                        <img class="slider-image" src="img/slider-girl.jpg" alt="girl">
+                    </div>
+                </div>
+				<!--<img class="product-image" src="img/product.png" alt="product">-->
 				<div class="text-block">
 					<span class="product-title">kerastase</span>
 					<span class="line"></span>
@@ -64,15 +73,15 @@
 						<span>Вашим волосам</span>
 					</div>
 				</div>
-				<div class="dots">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-				<div class="arrow-next"></div>
-				<div class="more-info-btn">
-					<span>подробнее</span>
-				</div>
+				<!--<div class="dots">-->
+					<!--<span></span>-->
+					<!--<span></span>-->
+					<!--<span></span>-->
+				<!--</div>-->
+				<!--<div class="arrow-next"></div>-->
+				<!--<div class="more-info-btn">-->
+					<!--<span>подробнее</span>-->
+				<!--</div>-->
 			</div>
 			<div class="divisions-row">
 				<div class="popular-brands background-popular">
@@ -203,5 +212,9 @@
 			</div>
 		</footer>
 	</div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
