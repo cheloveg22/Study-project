@@ -40,7 +40,7 @@
 				<img src="img/logo.png" alt="lovelyshops.com">
 			</div>
 			<div class="third-row">
-				<ul>
+				<ul id="menu" class="menu">
 					<li><a href="#">бренды</a></li>
 					<li><a href="#">для волос</a></li>
 					<li><a href="#">для лица</a></li>
@@ -51,7 +51,12 @@
 					<li><a href="#">парфюмерия</a></li>
 					<li><a href="#">для мужчин</a></li>
 					<li><a href="#"><i class="icon-search"></i></a></li>
+					<span class="close-menu" onclick="closeMenu()">close</span>
 				</ul>
+				
+				<div class="menu-burger" onclick="openMenu()">
+					<span></span><span></span><span></span>
+				</div>
 			</div>
 		</header>
 		<main>
@@ -61,7 +66,7 @@
                         <img class="slider-image" src="img/slider-girl.jpg" alt="girl">
                     </div>
                     <div class="image-block">
-                        <img class="slider-image" src="img/slider-girl.jpg" alt="girl">
+                        <img class="slider-image second-image" src="img/slider-girl2.jpg" alt="girl">
                     </div>
                 </div>
 				<!--<img class="product-image" src="img/product.png" alt="product">-->
@@ -73,15 +78,15 @@
 						<span>Вашим волосам</span>
 					</div>
 				</div>
-				<!--<div class="dots">-->
-					<!--<span></span>-->
-					<!--<span></span>-->
-					<!--<span></span>-->
-				<!--</div>-->
+				<div class="dots">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 				<!--<div class="arrow-next"></div>-->
-				<!--<div class="more-info-btn">-->
-					<!--<span>подробнее</span>-->
-				<!--</div>-->
+				<div class="more-info-btn">
+					<span>подробнее</span>
+				</div>
 			</div>
 			<div class="divisions-row">
 				<div class="popular-brands background-popular">
