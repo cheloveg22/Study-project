@@ -109,42 +109,40 @@ p {
         margin-bottom: 3px; }
   .wrapper main .slider-block {
     position: relative; }
-    .wrapper main .slider-block .slider {
-      height: 516px; }
-      .wrapper main .slider-block .slider .image-block {
-        position: relative;
-        height: 516px; }
-        .wrapper main .slider-block .slider .image-block img {
-          position: absolute;
-          left: 0; }
-          .wrapper main .slider-block .slider .image-block img:not(.second-image) {
-            top: -185px; }
-      .wrapper main .slider-block .slider .slick-prev {
-        position: absolute;
-        top: 205px;
-        left: 65px;
-        background-color: white;
-        border-radius: 20px;
-        background-image: url("../img/arrow-next.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 40px;
-        height: 40px;
-        z-index: 2;
-        transform: rotate(180deg); }
-        .wrapper main .slider-block .slider .slick-prev:before {
-          content: ""; }
-      .wrapper main .slider-block .slider .slick-next {
-        position: absolute;
-        top: 205px;
-        right: 65px;
-        background-color: white;
-        border-radius: 20px;
-        background-image: url("../img/arrow-next.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 40px;
-        height: 40px; }
+    .wrapper main .slider-block .slider .image-block {
+      position: relative; }
+      .wrapper main .slider-block .slider .image-block img {
+        width: 100%; }
+    .wrapper main .slider-block .slider .slick-prev {
+      position: absolute;
+      top: 205px;
+      left: 65px;
+      background-color: white;
+      border-radius: 20px;
+      background-image: url("../img/arrow-next.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 40px;
+      height: 40px;
+      z-index: 2;
+      transform: rotate(180deg); }
+      .wrapper main .slider-block .slider .slick-prev:before {
+        content: ""; }
+    .wrapper main .slider-block .slider .slick-next {
+      position: absolute;
+      top: 205px;
+      right: 65px;
+      background-color: white;
+      border-radius: 20px;
+      background-image: url("../img/arrow-next.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 40px;
+      height: 40px; }
+    .wrapper main .slider-block .product-image {
+      position: absolute;
+      left: 280px;
+      bottom: 55px; }
     .wrapper main .slider-block .text-block {
       position: absolute;
       top: 110px;
@@ -205,7 +203,7 @@ p {
       font-size: 18px;
       display: inline-block;
       height: 194px;
-      width: calc(100% / 3);
+      width: 33.33%;
       box-sizing: border-box;
       vertical-align: top; }
     .wrapper main .divisions-row .popular-brands {
@@ -291,6 +289,7 @@ p {
       display: inline-block;
       width: 33.33%;
       height: 300px;
+      vertical-align: bottom;
       font-size: 12px;
       box-sizing: border-box;
       border-bottom: 1px solid #e5e5e5;
@@ -307,7 +306,8 @@ p {
         font-family: "ProximaNovaRegular", serif;
         font-size: 12px;
         line-height: 16px;
-        color: #7f7f7f; }
+        color: #7f7f7f;
+        max-width: 135px; }
       .wrapper main .product-list .item .price {
         position: absolute;
         bottom: 30px;
@@ -320,10 +320,50 @@ p {
       .wrapper main .product-list .item img {
         position: absolute;
         bottom: 70px;
-        right: 60px; }
+        right: 60px;
+        z-index: -1; }
       .wrapper main .product-list .item.with-border {
         border-left: 1px solid #e5e5e5;
         border-right: 1px solid #e5e5e5; }
+      .wrapper main .product-list .item.item-2 img, .wrapper main .product-list .item.item-9 img {
+        bottom: 30px;
+        right: 105px; }
+      .wrapper main .product-list .item.item-3 img {
+        bottom: 50px;
+        right: 70px; }
+      .wrapper main .product-list .item.item-4 img {
+        bottom: 45px;
+        right: 110px; }
+      .wrapper main .product-list .item.item-5 img {
+        bottom: 55px;
+        right: 0; }
+      .wrapper main .product-list .item.item-6 img {
+        bottom: 80px;
+        right: 55px; }
+      .wrapper main .product-list .item.item-7 img {
+        bottom: 60px;
+        right: 60px; }
+      .wrapper main .product-list .item.item-8 img {
+        bottom: 50px;
+        right: 45px; }
+      .wrapper main .product-list .item.item-10 img {
+        bottom: 0;
+        right: 0; }
+      .wrapper main .product-list .item.last-item {
+        width: 66.66%;
+        background-image: url("../img/last-block-girl.jpg");
+        background-size: cover;
+        background-position-x: 100%;
+        background-color: #f5f8f7;
+        border-bottom: none;
+        border-left: 1px solid #e5e5e5; }
+        .wrapper main .product-list .item.last-item p {
+          max-width: 350px; }
+        .wrapper main .product-list .item.last-item .description {
+          font-size: 14px;
+          line-height: 18px;
+          color: #535151;
+          margin-bottom: 20px; }
   .wrapper footer {
     display: flex;
     justify-content: space-between;
@@ -390,6 +430,42 @@ p {
       .wrapper header .third-row .menu.open-menu {
         transform: none; }
       .wrapper header .third-row .menu .close-menu {
-        display: block; } }
+        display: block; }
+    .wrapper main .slider-block .slider button.slick-prev.slick-arrow,
+    .wrapper main .slider-block .slider button.slick-next.slick-arrow {
+      display: none !important; }
+    .wrapper main .slider-block .product-image {
+      bottom: 30px;
+      left: 30px;
+      width: 150px; }
+    .wrapper main .slider-block .text-block {
+      top: 50px;
+      left: 50px; }
+      .wrapper main .slider-block .text-block .product-title {
+        font-size: 30px; }
+      .wrapper main .slider-block .text-block .line {
+        display: none; }
+      .wrapper main .slider-block .text-block .product-text {
+        display: none; }
+    .wrapper main .slider-block .more-info-btn,
+    .wrapper main .slider-block .dots {
+      display: none; }
+    .wrapper main .divisions-row .popular-brands,
+    .wrapper main .divisions-row .men-goods {
+      background-position: 50% 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 50%; }
+    .wrapper main .divisions-row .hair-care {
+      display: none; }
+    .wrapper main .product-list .item {
+      width: 50%;
+      border: none; }
+      .wrapper main .product-list .item.with-border {
+        border: none; }
+      .wrapper main .product-list .item.last-item {
+        width: 100%; }
+    .wrapper footer {
+      flex-direction: column; } }
 
 /*# sourceMappingURL=style.css.map */

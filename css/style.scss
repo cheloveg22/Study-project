@@ -167,20 +167,12 @@ p {
       position: relative;
 
       .slider {
-        height: 516px;
 
         .image-block {
           position: relative;
-          height: 516px;
 
           img {
-            position: absolute;
-            //top: -185px;
-            left: 0;
-
-            &:not(.second-image) {
-              top: -185px;
-            }
+            width: 100%;
           }
         }
 
@@ -215,6 +207,12 @@ p {
           width: 40px;
           height: 40px;
         }
+      }
+
+      .product-image {
+        position: absolute;
+        left: 280px;
+        bottom: 55px;
       }
 
       .text-block {
@@ -304,8 +302,7 @@ p {
         font-size: 18px;
         display: inline-block;
         height: 194px;
-        //width: 427px;
-        width: calc(100% / 3);
+        width: 33.33%;
         box-sizing: border-box;
         vertical-align: top;
       }
@@ -421,11 +418,10 @@ p {
 
       .item {
         display: inline-block;
-        //width: 426px;
         width: 33.33%;
         height: 300px;
+        vertical-align: bottom;
         font-size: 12px;
-        //background-color: #ffbdbd;
         box-sizing: border-box;
         border-bottom: 1px solid #e5e5e5;
         position: relative;
@@ -445,6 +441,7 @@ p {
           font-size: 12px;
           line-height: 16px;
           color: #7f7f7f;
+          max-width: 135px;
         }
 
         .price {
@@ -462,12 +459,98 @@ p {
           position: absolute;
           bottom: 70px;
           right: 60px;
+          z-index: -1;
         }
 
         &.with-border {
-          //width: 428px;
           border-left: 1px solid #e5e5e5;
           border-right: 1px solid #e5e5e5;
+        }
+
+        &.item-2,
+        &.item-9 {
+
+          img {
+            bottom: 30px;
+            right: 105px;
+          }
+        }
+
+        &.item-3 {
+
+          img {
+            bottom: 50px;
+            right: 70px;
+          }
+        }
+
+        &.item-4 {
+
+          img {
+            bottom: 45px;
+            right: 110px;
+          }
+        }
+
+        &.item-5 {
+
+          img {
+            bottom: 55px;
+            right: 0;
+          }
+        }
+
+        &.item-6 {
+
+          img {
+            bottom: 80px;
+            right: 55px;
+          }
+        }
+
+        &.item-7 {
+
+          img {
+            bottom: 60px;
+            right: 60px;
+          }
+        }
+
+        &.item-8 {
+
+          img {
+            bottom: 50px;
+            right: 45px;
+          }
+        }
+
+        &.item-10 {
+
+          img {
+            bottom: 0;
+            right: 0;
+          }
+        }
+
+        &.last-item {
+          width: 66.66%;
+          background-image: url("../img/last-block-girl.jpg");
+          background-size: cover;
+          background-position-x: 100%;
+          background-color: #f5f8f7;
+          border-bottom: none;
+          border-left: 1px solid #e5e5e5;
+
+          p {
+            max-width: 350px;
+          }
+
+          .description {
+            font-size: 14px;
+            line-height: 18px;
+            color: #535151;
+            margin-bottom: 20px;
+          }
         }
       }
     }
@@ -578,6 +661,82 @@ p {
           }
         }
       }
+    }
+
+    main {
+      .slider-block {
+
+        .slider {
+
+          button.slick-prev.slick-arrow,
+          button.slick-next.slick-arrow {
+            display: none !important;
+          }
+        }
+
+        .product-image {
+          bottom: 30px;
+          left: 30px;
+          width: 150px;
+        }
+
+        .text-block {
+          top: 50px;
+          left: 50px;
+
+          .product-title {
+            font-size: 30px;
+          }
+
+          .line {
+            display: none;
+          }
+
+          .product-text {
+            display: none;
+          }
+        }
+
+        .more-info-btn,
+        .dots {
+          display: none;
+        }
+      }
+
+      .divisions-row {
+
+        .popular-brands,
+        .men-goods {
+          background-position: 50% 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 50%;
+        }
+
+        .hair-care {
+          display: none;
+        }
+      }
+
+      .product-list {
+
+        .item {
+          width: 50%;
+          border: none;
+
+          &.with-border {
+            border: none;
+          }
+
+          &.last-item {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    footer {
+      flex-direction: column;
     }
   }
 }
