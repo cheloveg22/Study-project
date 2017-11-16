@@ -146,9 +146,9 @@ p {
       }
 
       .menu-burger {
-        float: right;
-        margin-right: 30px;
+        margin-left: 30px;
         display: none;
+        text-align: right;
 
         span {
           display: block;
@@ -301,22 +301,10 @@ p {
         font-family: "ProximaNovaBold", serif;
         font-size: 18px;
         display: inline-block;
-        height: 194px;
+        min-height: 194px;
         width: 33.33%;
         box-sizing: border-box;
         vertical-align: top;
-      }
-
-      .popular-brands {
-        position: relative;
-        padding: 30px 40px;
-        color: #c59a77;
-
-        p {
-          margin: 0;
-          width: 130px;
-          line-height: 24px;
-        }
 
         .arrow-btn {
           position: absolute;
@@ -331,16 +319,51 @@ p {
           border: 1px solid #433830;
           color: black;
           background-color: #1f1f1f;
+          transition: .3s;
+          cursor: pointer;
 
           i {
             margin-left: 12px;
           }
+
+          &:hover {
+            background-color: white;
+          }
         }
       }
 
+      .popular-brands {
+        position: relative;
+        padding: 30px 40px;
+        color: #c59a77;
+
+        p {
+          margin: 0;
+          width: 130px;
+          line-height: 24px;
+        }
+
+        //.arrow-btn {
+        //  position: absolute;
+        //  left: 40px;
+        //  bottom: 30px;
+        //  width: 40px;
+        //  height: 40px;
+        //  font-size: 12px;
+        //  box-sizing: border-box;
+        //  border-radius: 20px;
+        //  line-height: 40px;
+        //  border: 1px solid #433830;
+        //  color: black;
+        //  background-color: #1f1f1f;
+        //
+        //  i {
+        //    margin-left: 12px;
+        //  }
+        //}
+      }
+
       .hair-care {
-        //width: 426px;
-        //width: 34%;
         position: relative;
         padding: 30px 40px;
         color: #1e1e1e;
@@ -351,23 +374,23 @@ p {
           line-height: 24px;
         }
 
-        .arrow-btn {
-          position: absolute;
-          left: 40px;
-          bottom: 30px;
-          width: 40px;
-          height: 40px;
-          font-size: 12px;
-          box-sizing: border-box;
-          border-radius: 20px;
-          line-height: 40px;
-          color: white;
-          background-color: #1e1e1e;
-
-          i {
-            margin-left: 12px;
-          }
-        }
+        //.arrow-btn {
+        //  position: absolute;
+        //  left: 40px;
+        //  bottom: 30px;
+        //  width: 40px;
+        //  height: 40px;
+        //  font-size: 12px;
+        //  box-sizing: border-box;
+        //  border-radius: 20px;
+        //  line-height: 40px;
+        //  color: white;
+        //  background-color: #1e1e1e;
+        //
+        //  i {
+        //    margin-left: 12px;
+        //  }
+        //}
       }
 
       .men-goods {
@@ -381,23 +404,23 @@ p {
           line-height: 24px;
         }
 
-        .arrow-btn {
-          position: absolute;
-          left: 40px;
-          bottom: 30px;
-          width: 40px;
-          height: 40px;
-          font-size: 12px;
-          box-sizing: border-box;
-          border-radius: 20px;
-          line-height: 40px;
-          color: #b58c6b;
-          background-color: white;
-
-          i {
-            margin-left: 12px;
-          }
-        }
+        //.arrow-btn {
+        //  position: absolute;
+        //  left: 40px;
+        //  bottom: 30px;
+        //  width: 40px;
+        //  height: 40px;
+        //  font-size: 12px;
+        //  box-sizing: border-box;
+        //  border-radius: 20px;
+        //  line-height: 40px;
+        //  color: #b58c6b;
+        //  background-color: white;
+        //
+        //  i {
+        //    margin-left: 12px;
+        //  }
+        //}
 
         img {
           position: absolute;
@@ -419,7 +442,7 @@ p {
       .item {
         display: inline-block;
         width: 33.33%;
-        height: 300px;
+        min-height: 300px;
         vertical-align: bottom;
         font-size: 12px;
         box-sizing: border-box;
@@ -460,6 +483,17 @@ p {
           bottom: 70px;
           right: 60px;
           z-index: -1;
+        }
+
+        .add-to-cart {
+          position: absolute;
+          bottom: 30px;
+          right: 30px;
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
+          box-shadow: 0 3px 3px -1px rgba(0, 0, 0, 0.75);
+          background: url("../img/cart.png") no-repeat center;
         }
 
         &.with-border {
@@ -723,13 +757,19 @@ p {
         .item {
           width: 50%;
           border: none;
+          border-bottom: 1px solid #e5e5e5;
 
           &.with-border {
             border: none;
+            border-bottom: 1px solid #e5e5e5;
           }
 
           &.last-item {
             width: 100%;
+          }
+
+          &:nth-child(2n) {
+            border-left: 1px solid #e5e5e5;
           }
         }
       }
@@ -737,6 +777,49 @@ p {
 
     footer {
       flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+
+    main {
+
+      .slider-block {
+
+        .product-image {
+          bottom: 18px;
+          left: 30px;
+          width: 100px;
+        }
+
+        .text-block {
+          top: 30px;
+          left: 30px;
+
+          .product-title {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .divisions-row {
+
+        .popular-brands,
+        .men-goods {
+          width: 100%;
+        }
+      }
+
+      .product-list {
+
+        .item {
+          width: 100%;
+
+          &:nth-child(2n) {
+            border-left: none;
+          }
+        }
+      }
     }
   }
 }

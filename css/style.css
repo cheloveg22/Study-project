@@ -98,9 +98,9 @@ p {
       .wrapper header .third-row .menu .close-menu {
         display: none; }
     .wrapper header .third-row .menu-burger {
-      float: right;
-      margin-right: 30px;
-      display: none; }
+      margin-left: 30px;
+      display: none;
+      text-align: right; }
       .wrapper header .third-row .menu-burger span {
         display: block;
         height: 3px;
@@ -202,19 +202,13 @@ p {
       font-family: "ProximaNovaBold", serif;
       font-size: 18px;
       display: inline-block;
-      height: 194px;
+      min-height: 194px;
       width: 33.33%;
       box-sizing: border-box;
       vertical-align: top; }
-    .wrapper main .divisions-row .popular-brands {
-      position: relative;
-      padding: 30px 40px;
-      color: #c59a77; }
-      .wrapper main .divisions-row .popular-brands p {
-        margin: 0;
-        width: 130px;
-        line-height: 24px; }
-      .wrapper main .divisions-row .popular-brands .arrow-btn {
+      .wrapper main .divisions-row .popular-brands .arrow-btn,
+      .wrapper main .divisions-row .hair-care .arrow-btn,
+      .wrapper main .divisions-row .men-goods .arrow-btn {
         position: absolute;
         left: 40px;
         bottom: 30px;
@@ -226,9 +220,25 @@ p {
         line-height: 40px;
         border: 1px solid #433830;
         color: black;
-        background-color: #1f1f1f; }
-        .wrapper main .divisions-row .popular-brands .arrow-btn i {
+        background-color: #1f1f1f;
+        transition: .3s;
+        cursor: pointer; }
+        .wrapper main .divisions-row .popular-brands .arrow-btn i,
+        .wrapper main .divisions-row .hair-care .arrow-btn i,
+        .wrapper main .divisions-row .men-goods .arrow-btn i {
           margin-left: 12px; }
+        .wrapper main .divisions-row .popular-brands .arrow-btn:hover,
+        .wrapper main .divisions-row .hair-care .arrow-btn:hover,
+        .wrapper main .divisions-row .men-goods .arrow-btn:hover {
+          background-color: white; }
+    .wrapper main .divisions-row .popular-brands {
+      position: relative;
+      padding: 30px 40px;
+      color: #c59a77; }
+      .wrapper main .divisions-row .popular-brands p {
+        margin: 0;
+        width: 130px;
+        line-height: 24px; }
     .wrapper main .divisions-row .hair-care {
       position: relative;
       padding: 30px 40px;
@@ -237,20 +247,6 @@ p {
         margin: 0;
         width: 130px;
         line-height: 24px; }
-      .wrapper main .divisions-row .hair-care .arrow-btn {
-        position: absolute;
-        left: 40px;
-        bottom: 30px;
-        width: 40px;
-        height: 40px;
-        font-size: 12px;
-        box-sizing: border-box;
-        border-radius: 20px;
-        line-height: 40px;
-        color: white;
-        background-color: #1e1e1e; }
-        .wrapper main .divisions-row .hair-care .arrow-btn i {
-          margin-left: 12px; }
     .wrapper main .divisions-row .men-goods {
       position: relative;
       padding: 30px 40px;
@@ -259,20 +255,6 @@ p {
         margin: 0;
         width: 130px;
         line-height: 24px; }
-      .wrapper main .divisions-row .men-goods .arrow-btn {
-        position: absolute;
-        left: 40px;
-        bottom: 30px;
-        width: 40px;
-        height: 40px;
-        font-size: 12px;
-        box-sizing: border-box;
-        border-radius: 20px;
-        line-height: 40px;
-        color: #b58c6b;
-        background-color: white; }
-        .wrapper main .divisions-row .men-goods .arrow-btn i {
-          margin-left: 12px; }
       .wrapper main .divisions-row .men-goods img {
         position: absolute;
         bottom: 20px;
@@ -288,7 +270,7 @@ p {
     .wrapper main .product-list .item {
       display: inline-block;
       width: 33.33%;
-      height: 300px;
+      min-height: 300px;
       vertical-align: bottom;
       font-size: 12px;
       box-sizing: border-box;
@@ -322,6 +304,15 @@ p {
         bottom: 70px;
         right: 60px;
         z-index: -1; }
+      .wrapper main .product-list .item .add-to-cart {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        box-shadow: 0 3px 3px -1px rgba(0, 0, 0, 0.75);
+        background: url("../img/cart.png") no-repeat center; }
       .wrapper main .product-list .item.with-border {
         border-left: 1px solid #e5e5e5;
         border-right: 1px solid #e5e5e5; }
@@ -460,12 +451,33 @@ p {
       display: none; }
     .wrapper main .product-list .item {
       width: 50%;
-      border: none; }
+      border: none;
+      border-bottom: 1px solid #e5e5e5; }
       .wrapper main .product-list .item.with-border {
-        border: none; }
+        border: none;
+        border-bottom: 1px solid #e5e5e5; }
       .wrapper main .product-list .item.last-item {
         width: 100%; }
+      .wrapper main .product-list .item:nth-child(2n) {
+        border-left: 1px solid #e5e5e5; }
     .wrapper footer {
       flex-direction: column; } }
+  @media screen and (max-width: 700px) {
+    .wrapper main .slider-block .product-image {
+      bottom: 18px;
+      left: 30px;
+      width: 100px; }
+    .wrapper main .slider-block .text-block {
+      top: 30px;
+      left: 30px; }
+      .wrapper main .slider-block .text-block .product-title {
+        font-size: 18px; }
+    .wrapper main .divisions-row .popular-brands,
+    .wrapper main .divisions-row .men-goods {
+      width: 100%; }
+    .wrapper main .product-list .item {
+      width: 100%; }
+      .wrapper main .product-list .item:nth-child(2n) {
+        border-left: none; } }
 
 /*# sourceMappingURL=style.css.map */
