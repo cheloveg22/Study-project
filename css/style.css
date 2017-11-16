@@ -408,7 +408,7 @@ p {
       overflow: hidden;
       background-color: white;
       padding: 10px 0;
-      height: 100%;
+      height: 100vh;
       transform: translateX(-103%);
       transition: transform .5s; }
       .wrapper header .third-row .menu li {
